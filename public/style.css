@@ -1,0 +1,144 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial,sans-serif;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+background:#1e293b;
+padding:30px;
+text-align:center;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.logo img{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero h2{
+color:#facc15;
+margin-bottom:10px;
+}
+
+.hero h3{
+margin-bottom:15px;
+}
+
+.slots{
+font-size:20px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.card h2{
+margin-bottom:20px;
+}
+
+.card h3{
+margin-top:20px;
+margin-bottom:10px;
+}
+
+.input-group{
+margin-bottom:15px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:5px;
+}
+
+input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+outline:none;
+margin-bottom:10px;
+font-size:16px;
+}
+
+.player-box{
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#f59e0b;
+border:none;
+border-radius:10px;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+transition:.3s;
+}
+
+button:hover
+
+table{
+width:100%;
+border-collapse:collapse;
+overflow:hidden;
+}
+
+table th{
+background:#334155;
+}
+
+table th,
+table td{
+border:1px solid #475569;
+padding:12px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#273449;
+}
+
+@media(max-width:768px){
+
+```
+.hero h1{
+    font-size:28px;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+```
+
+}
