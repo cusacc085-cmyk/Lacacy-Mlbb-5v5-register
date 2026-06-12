@@ -2,125 +2,181 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLBB Tournament Registration</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Tournament Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <header class="hero">
+```
+<header class="hero">
+
     <div class="logo">
-      <img src="logo.png" alt="Tournament Logo" id="logo">
+        <img src="logo.png" alt="Tournament Logo">
     </div>
 
+    <h1>🏆 MLBB TOURNAMENT</h1>
+    <h2>Prize Pool: ₹8,000</h2>
+    <h3>Entry Fee: ₹200</h3>
+
+    <div class="slots">
+        Slots Filled:
+        <span id="slotCount">0</span>/50
+    </div>
+
+</header>
+
+<section class="card">
+
+    <h2>Team Registration</h2>
+
+    <div class="input-group">
+        <label>Team Name</label>
+        <input
+            type="text"
+            id="teamName"
+            placeholder="Enter Team Name">
+    </div>
+
+    <div class="input-group">
+        <label>Captain Name</label>
+        <input
+            type="text"
+            id="captainName"
+            placeholder="Enter Captain Name">
+    </div>
+
+    <div class="input-group">
+        <label>Contact Number</label>
+        <input
+            type="text"
+            id="contact"
+            placeholder="Enter WhatsApp Number">
+    </div>
+
+    <h3>💰 Payment (₹200)</h3>
+
+    <p>Scan the QR code and complete payment.</p>
+
+    <img
+        src="qr.png"
+        alt="Payment QR"
+        class="qr-image">
+
+    <div class="input-group">
+        <label>Transaction ID</label>
+        <input
+            type="text"
+            id="txnId"
+            placeholder="Enter Transaction ID">
+    </div>
+
+    <div class="input-group">
+        <label>Payment Screenshot</label>
+        <input
+            type="file"
+            id="screenshot"
+            accept="image/*">
+    </div>
+
+    <h3>Starting Players</h3>
+
+    <div class="player-box">
+        <input type="text" id="p1ign" placeholder="Player 1 IGN">
+        <input type="text" id="p1id" placeholder="Player 1 Server ID">
+    </div>
+
+    <div class="player-box">
+        <input type="text" id="p2ign" placeholder="Player 2 IGN">
+        <input type="text" id="p2id" placeholder="Player 2 Server ID">
+    </div>
+
+    <div class="player-box">
+        <input type="text" id="p3ign" placeholder="Player 3 IGN">
+        <input type="text" id="p3id" placeholder="Player 3 Server ID">
+    </div>
+
+    <div class="player-box">
+        <input type="text" id="p4ign" placeholder="Player 4 IGN">
+        <input type="text" id="p4id" placeholder="Player 4 Server ID">
+    </div>
+
+    <div class="player-box">
+        <input type="text" id="p5ign" placeholder="Player 5 IGN">
+        <input type="text" id="p5id" placeholder="Player 5 Server ID">
+    </div>
+
+    <h3>Substitutes</h3>
+
+    <div class="player-box">
+        <input type="text" id="s1ign" placeholder="Substitute 1 IGN">
+        <input type="text" id="s1id" placeholder="Substitute 1 Server ID">
+    </div>
+
+    <div class="player-box">
+        <input type="text" id="s2ign" placeholder="Substitute 2 IGN">
+        <input type="text" id="s2id" placeholder="Substitute 2 Server ID">
+    </div>
+
+    <button id="registerBtn">
+        Register Team
+    </button>
+
+</section>
+
+<section class="card">
+
+    <h2>Registered Teams</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>Captain</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+
+        <tbody id="teamTable">
+        </tbody>
+
+    </table>
+
+</section>
+
+<section
+    class="card"
+    id="groupSection"
+    style="display:none;text-align:center;">
+
+    <h2>✅ Registration Successful</h2>
+
+    <p>
+        Join the WhatsApp group for tournament
+        updates, schedules and announcements.
+    </p>
+
+    <a
+        href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK"
+        target="_blank">
+
+        <button>
+            Join WhatsApp Group
+        </button>
+
+    </a>
+
+</section>
 ```
-<h1>🏆 MLBB TOURNAMENT</h1>
-<h2>Prize Pool: ₹8,000</h2>
-<h3>Entry Fee: ₹200</h3>
-
-<div class="slots">
-  Slots Filled:
-  <span id="slotCount">0</span>/50
-</div>
-```
-
-  </header>
-
-  <section class="card">
-
-```
-<h2>Team Registration</h2>
-
-<div class="input-group">
-  <label>Team Name</label>
-  <input type="text" id="teamName" placeholder="Enter Team Name">
-</div>
-
-<div class="input-group">
-  <label>Captain Name</label>
-  <input type="text" id="captainName" placeholder="Enter Captain Name">
-</div>
-
-<div class="input-group">
-  <label>Contact Number</label>
-  <input type="text" id="contact" placeholder="Enter WhatsApp Number">
-</div>
-
-<h3>Starting Players</h3>
-
-<div class="player-box">
-  <input type="text" id="p1ign" placeholder="Player 1 IGN">
-  <input type="text" id="p1id" placeholder="Player 1 MLBB ID">
-</div>
-
-<div class="player-box">
-  <input type="text" id="p2ign" placeholder="Player 2 IGN">
-  <input type="text" id="p2id" placeholder="Player 2 MLBB ID">
-</div>
-
-<div class="player-box">
-  <input type="text" id="p3ign" placeholder="Player 3 IGN">
-  <input type="text" id="p3id" placeholder="Player 3 MLBB ID">
-</div>
-
-<div class="player-box">
-  <input type="text" id="p4ign" placeholder="Player 4 IGN">
-  <input type="text" id="p4id" placeholder="Player 4 MLBB ID">
-</div>
-
-<div class="player-box">
-  <input type="text" id="p5ign" placeholder="Player 5 IGN">
-  <input type="text" id="p5id" placeholder="Player 5 MLBB ID">
-</div>
-
-<h3>Substitutes</h3>
-
-<div class="player-box">
-  <input type="text" id="s1ign" placeholder="Substitute 1 IGN">
-  <input type="text" id="s1id" placeholder="Substitute 1 MLBB ID">
-</div>
-
-<div class="player-box">
-  <input type="text" id="s2ign" placeholder="Substitute 2 IGN">
-  <input type="text" id="s2id" placeholder="Substitute 2 MLBB ID">
-</div>
-
-<button id="registerBtn">
-  Register Team
-</button>
-```
-
-  </section>
-
-  <section class="card">
-
-```
-<h2>Registered Teams</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Team</th>
-      <th>Captain</th>
-      <th>Contact</th>
-    </tr>
-  </thead>
-
-  <tbody id="teamTable">
-  </tbody>
-</table>
-```
-
-  </section>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-    </html>
-  
+</html>
