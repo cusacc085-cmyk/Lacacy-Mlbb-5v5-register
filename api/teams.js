@@ -16,12 +16,11 @@ try {
 
     const db = client.db("SlimeBot");
 
-    const collection =
-        db.collection("mlbb_teams");
+    const collection = db.collection("mlbb_teams");
 
     const teams = await collection
         .find({})
-        .sort({ createdAt: 1 })
+        .sort({ createdAt: -1 })
         .toArray();
 
     res.status(200).json(teams);
@@ -34,6 +33,11 @@ try {
         success: false,
         message: "Internal Server Error"
     });
+
+}
+```
+
+};
 
 }
 ```
