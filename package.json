@@ -1,12 +1,13 @@
 {
 "name": "mlbb-tournament",
 "version": "1.0.0",
-"description": "MLBB Tournament Registration System",
+"description": "MLBB Tournament Registration Website",
 "main": "index.js",
 "scripts": {
 "start": "node index.js"
 },
 "dependencies": {
-"mongodb": "^6.18.0"
+"axios": "^1.9.0",
+"mongodb": "^6.17.0"
 }
 }
